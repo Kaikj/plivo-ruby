@@ -30,9 +30,8 @@ require_relative 'xml/sub'
 require_relative 'xml/w'
 require_relative 'xml/plivo_xml'
 
-include Plivo::Exceptions
-
 module Plivo
   module XML
+    include Plivo::Exceptions
   end
 end
