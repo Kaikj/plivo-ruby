@@ -636,7 +636,7 @@ module Plivo
           valid_param?(:name, name, [String, Symbol], true)
   
           if name.nil? 
-            raise InvalidRequestError, 'powerpack name cannot be empty'
+            raise Exceptions::InvalidRequestError, 'powerpack name cannot be empty'
           end
   
   

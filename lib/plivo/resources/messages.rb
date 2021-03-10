@@ -81,15 +81,15 @@ module Plivo
         end
 
         if dst.include? src
-          raise InvalidRequestError, 'src and dst cannot be same'
+          raise Exceptions::InvalidRequestError, 'src and dst cannot be same'
         end
 
         if src.nil? && powerpack_uuid.nil?
-          raise InvalidRequestError, 'src and powerpack uuid both cannot be nil'
+          raise Exceptions::InvalidRequestError, 'src and powerpack uuid both cannot be nil'
         end
 
         if !src.nil? && !powerpack_uuid.nil?
-          raise InvalidRequestError, 'src and powerpack uuid both cannot be present'
+          raise Exceptions::InvalidRequestError, 'src and powerpack uuid both cannot be present'
         end
 
         params = {
